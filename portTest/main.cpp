@@ -14,7 +14,10 @@ int main(int argc, char** argv)
 	if (port.InitPort(3)) {//初始化com3  3代表com3 4代表com4，可通过设备管理器查看
 	//发送数据
 		port.WriteData(open, 3);
+		//延时1s
+		//可使用opencvwaitkey()延时
 		port.WriteData(close, 3);
+		//延时1s
 	}
 	else {
 		cout << "open port fail" << endl;
